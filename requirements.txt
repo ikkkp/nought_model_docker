@@ -1,0 +1,6 @@
+huggingface-hub==0.0.13
+regex==2022.4.17
+Pillow==9.0.1
+transformers==4.12.2
+datasets==1.15.0
+torch==1.10.0

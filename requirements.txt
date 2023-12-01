@@ -1,6 +1,7 @@
 huggingface-hub==0.0.13
 regex==2022.4.17
-Pillow==9.0.1
-transformers==4.12.2
-datasets==1.15.0
+Pillow~=10.1.0
+transformers~=4.36.0.dev0
+datasets~=2.12.0
 torch==1.10.0
+flask~=2.2.2

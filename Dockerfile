@@ -1,11 +1,10 @@
 # Use an official Python runtime as a base image
-FROM python:3.10
+FROM --platform=linux/amd64 python:3.10
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY model /app
+COPY ./requirements.txt  /app/requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -13,8 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Make port 80 available to the world outside this container
 EXPOSE 8980
 
-# Define environment variable
-ENV NAME World
+COPY . .
 
-# Run main.py when the container launches
-CMD ["python3.10", "nougatProcessor_base.py"]
+# 定义启动应用程序的命令
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

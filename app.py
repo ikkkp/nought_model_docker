@@ -8,4 +8,4 @@ app.register_blueprint(Ocean_PDF2Text)
 app.register_blueprint(PDF_QA_Controller)
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=True)
+    app.run(port=8980, debug=True, threaded=True)

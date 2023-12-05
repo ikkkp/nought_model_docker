@@ -1,5 +1,7 @@
 import logging
 from flask import Flask, jsonify
+
+from controller.milvusController import Milvus_Database
 from controller.pdf2textController import Ocean_PDF2Text
 from controller.pdfqaController import PDF_QA_Controller
 from controller.textembController import Text_Emb_Controller
@@ -19,6 +21,7 @@ app.logger.addHandler(file_handler)
 app.register_blueprint(Ocean_PDF2Text)
 app.register_blueprint(PDF_QA_Controller)
 app.register_blueprint(Text_Emb_Controller)
+app.register_blueprint(Milvus_Database)
 
 
 # 定义全局异常处理函数

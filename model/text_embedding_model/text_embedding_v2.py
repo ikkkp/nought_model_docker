@@ -27,7 +27,7 @@ def embed_with_str(api_key, input_str):
         api_key=api_key
     )
 
-    return repr(resp)
+    return resp
 
 
 # Example Usage:

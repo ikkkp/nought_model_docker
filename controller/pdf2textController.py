@@ -110,3 +110,4 @@ def query():
     else:
         # Handle other HTTP methods if necessary
         return 'Method Not Allowed', 405
+

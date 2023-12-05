@@ -8,7 +8,6 @@ Desc   : Alibaba Cloud General Text Embedding - Universal Language Model-based M
 """
 
 import dashscope
-from http import HTTPStatus
 
 def embed_with_str(api_key, input_str):
     """
@@ -21,16 +20,15 @@ def embed_with_str(api_key, input_str):
     Returns:
         None: Prints the API response.
     """
+
     resp = dashscope.TextEmbedding.call(
         model=dashscope.TextEmbedding.Models.text_embedding_v1,
         input=input_str,
         api_key=api_key
     )
-    
-    if resp.status_code == HTTPStatus.OK:
-        print(resp)
-    else:
-        print(resp)
+
+    return repr(resp)
+
 
 # Example Usage:
 # api_key = "your_api_key"

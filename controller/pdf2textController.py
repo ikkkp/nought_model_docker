@@ -8,7 +8,7 @@ from flask import Blueprint, request, jsonify
 import requests
 from model.pdf2text_model.nougat_model_base import nougatProcessor_base
 from model.pdf2text_model.nougat_model_small import nougatProcessor_small
-from config.config import Authorization_API_KEY
+from config.config import Nougat_Base_API_KEY
 
 Ocean_PDF2Text = Blueprint('Ocean_PDF2Text', __name__)
 
@@ -83,7 +83,7 @@ def query():
 
             # Set up API endpoint and headers
             API_URL = "https://api-inference.huggingface.co/models/facebook/nougat-base"
-            headers = {"Authorization": "Bearer " + Authorization_API_KEY}
+            headers = {"Authorization": "Bearer " + Nougat_Base_API_KEY}
 
             # Access the file data from the request
             request_data = request.get_json()

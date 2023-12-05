@@ -1,12 +1,12 @@
-'''
+"""
 @File  :pdfqaController.py
 @Author:Ezra Zephyr
 @Date  :2023/12/21:09
 @Desc  :
-'''
+"""
+
 from flask import Blueprint, request, jsonify
 from model.pdf2text_model.layoutlm_document_qa import layoutlm_document_qa
-
 
 PDF_QA_Controller = Blueprint('PDF_QA_Controller', __name__)
 
